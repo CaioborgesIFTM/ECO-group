@@ -1,0 +1,25 @@
+/* Indicadores do relatório e capa da faixa mais escutada. */
+.eco-meu-mes .stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+.eco-meu-mes .stats > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+.eco-faixa-do-mes a { display: flex; align-items: center; gap: 10px; }
+.eco-faixa-do-mes img {
+  width: 44px; height: 44px; border-radius: 8px; object-fit: cover;
+}
+.eco-meu-mes .eco-dupla { align-items: stretch; }
+.eco-meu-mes .eco-dupla > div { margin: 0; min-width: 0; }
+.eco-meu-mes .eco-ranking { padding: 0; margin-inline: 0; }
+.eco-meu-mes .eco-ranking > div {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+

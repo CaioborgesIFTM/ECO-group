@@ -1,0 +1,12 @@
+/* Ações ilustrativas do painel de administração. */
+.eco-admin-botoes button:disabled {
+    background: #142044;
+    color: #ffffff;
+    border: 1px solid #52658c;
+    border-radius: 8px;
+    padding: 7px 12px;
+    font: inherit;
+    font-size: 0.85rem;
+    opacity: 1;
+    cursor: default;
+}

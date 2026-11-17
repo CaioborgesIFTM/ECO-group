@@ -1,0 +1,429 @@
+/* Abertura editorial do ECO */
+.hero.hero-eco {
+  container-type: inline-size;
+  display: block;
+  padding: 0;
+  min-height: 0;
+  border: 1px solid #254369;
+  border-radius: 22px;
+  background: radial-gradient(ellipse at 84% 76%, #194b81 0%, transparent 49%),
+    linear-gradient(110deg, #090f24 4%, #0b1836 40%, #0d2b61 79%, #142c51);
+}
+
+.hero-eco::before {
+  inset: 0;
+  animation: none;
+  background: repeating-linear-gradient(118deg, transparent 0 70px, #70bafa0a 71px, transparent 72px);
+}
+
+.hero-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: clamp(340px, 34cqw, 480px);
+  padding: clamp(28px, 4.3cqw, 66px);
+  gap: 2%;
+}
+
+.hero-eco .hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.hero-eco .kicker {
+  color: #79edfa;
+  letter-spacing: .16em;
+  line-height: 1.5;
+}
+
+.hero-eco .kicker .eco-i {
+  width: 24px;
+  height: 3px;
+  background: #ff6b1a;
+}
+
+.hero-eco h1 {
+  margin: 18px 0;
+  font-size: clamp(2.75rem, 5.9cqw, 6.5rem);
+  line-height: .99;
+  letter-spacing: -.06em;
+  overflow-wrap: anywhere;
+}
+
+.hero-eco h1 .eco-em {
+  font: inherit;
+  letter-spacing: inherit;
+  color: #69edff;
+}
+
+.hero-eco .hero-copy p {
+  font-size: clamp(.95rem, 1.18cqw, 1.12rem);
+  color: #d1deec;
+  line-height: 1.55;
+  max-width: 39ch;
+  margin: 0;
+}
+
+.hero-eco .ctas {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hero-eco .ctas a {
+  padding: 11px 17px;
+  min-height: 44px;
+}
+
+.hero-eco .outline {
+  background: #0d1b32;
+  border-color: #455976;
+}
+
+.hero-eco .outline:hover {
+  border-color: #86eafa;
+  color: #fff;
+}
+
+.capa-eco {
+  isolation: isolate;
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 1.5;
+  justify-self: center;
+  pointer-events: none;
+}
+
+.vinil-eco,
+.envelope-eco {
+  position: absolute;
+  aspect-ratio: 1;
+}
+
+.vinil-eco {
+  width: 65.5%;
+  top: 0;
+  right: 1.5%;
+  border-radius: 50%;
+  border: 1px solid #a2bfd7;
+  background: repeating-radial-gradient(circle, transparent 0px 1.3px, #a8c5e038 1.7px, transparent 2.55px),
+    conic-gradient(from 18deg, #0a1020 0deg, #354457 30deg, #0c1018 64deg, #121d2c 112deg, #6e879a 143deg, #1e283c 160deg, #0a0f1c 195deg, #50657b 222deg, #0a0e18 256deg, #121826 305deg, #7e93a5 335deg, #0a1020);
+  box-shadow: 6px 18px 26px #03081999, inset 0 0 0 3px #111b2f;
+}
+
+.vinil-eco .eco-i {
+  position: absolute;
+  inset: 33%;
+  border-radius: 50%;
+  border: 1px solid #ffd099;
+  background: radial-gradient(circle, #071428 0 4%, #c04a1b 4.5% 6%, transparent 6.5%), repeating-radial-gradient(circle, #ffb16d 0 2%, #ff9346 2.4% 4%, #e6752e 4.5% 5%);
+}
+
+.envelope-eco {
+  width: 57%;
+  left: 5%;
+  bottom: 3%;
+  overflow: hidden;
+  transform: rotate(-9deg);
+  border: 1px solid #6bd2ec;
+  background: linear-gradient(145deg, #a6fcf1 0%, #4cdbf1 29%, #0d91d5 70%, #0758ad);
+  box-shadow: -3px 4px 0 #053563, 0 20px 35px #030819aa, inset 0 0 20px #dcffff3d;
+}
+
+.gravura-eco {
+  position: absolute;
+  inset: -8%;
+  background: repeating-radial-gradient(ellipse 78% 44% at 94% 72%, transparent 0 2.3%, #062650 2.65% 3.7%, transparent 4.03% 4.7%);
+  transform: rotate(-23deg);
+}
+
+.envelope-eco .eco-b {
+  position: absolute;
+  left: 6%;
+  top: 4%;
+  font: 900 clamp(32px, 6.3cqw, 110px)/.9 Arial, sans-serif;
+  letter-spacing: -.1em;
+  color: #071d39;
+}
+
+.marca-sonora {
+  position: absolute;
+  left: 7%;
+  bottom: 7%;
+  color: #082648;
+  line-height: 1;
+  letter-spacing: -.035em;
+  background: #79ebef;
+  padding: 2% 3%;
+  font-size: clamp(10px, 1.2cqw, 18px);
+}
+
+@container (max-width:650px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: clamp(20px, 6cqw, 36px);
+    min-height: 0;
+  }
+
+  .hero-eco h1 {
+    font-size: clamp(2.5rem, 9.3cqw, 3.7rem);
+    margin: 12px 0;
+  }
+
+  .hero-eco .hero-copy p {
+    max-width: 36ch;
+  }
+
+  .hero-eco .ctas {
+    margin-top: 17px;
+  }
+
+  .capa-eco {
+    width: 74%;
+    max-width: 300px;
+    aspect-ratio: 1.58;
+    justify-self: end;
+    margin: 0 1% 0 0;
+  }
+
+  .envelope-eco .eco-b {
+    font-size: clamp(2rem, 10cqw, 3.6rem);
+  }
+}
+
+@container (max-width:330px) {
+  .hero-eco .ctas {
+    gap: 6px;
+  }
+
+  .hero-eco .ctas a {
+    font-size: .78rem;
+    padding: 9px 11px;
+  }
+}
+
+/* Prateleiras de descoberta da página inicial */
+.home-genres,
+.home-shelf {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 215px), 1fr));
+}
+
+.genre-door,
+.shelf-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid #2d4563;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color .2s ease;
+}
+
+.genre-door:hover,
+.shelf-item:hover,
+.genre-door:focus-visible,
+.shelf-item:focus-visible {
+  border-color: var(--cyan);
+}
+
+.genre-door {
+  min-height: 138px;
+  padding: 20px;
+  isolation: isolate;
+  background: #123459;
+}
+
+.genre-door:nth-child(4n + 2) {
+  background: #163e41;
+}
+
+.genre-door:nth-child(4n + 3) {
+  background: #432b47;
+}
+
+.genre-door:nth-child(4n) {
+  background: #263660;
+}
+
+.genre-art {
+  position: absolute;
+  z-index: -2;
+  right: 0;
+  top: 0;
+  width: 62%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to right, transparent, #000 62%);
+}
+
+.genre-door:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(0deg, #081222c9, transparent 92%);
+}
+
+.genre-title {
+  display: grid;
+  gap: 3px;
+  align-self: end;
+  max-width: calc(100% - 20px);
+}
+
+.genre-title .eco-strong {
+  color: white;
+  font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.genre-title .eco-small {
+  color: #e1eaf3;
+}
+
+.genre-door>.eco-svg {
+  margin-left: auto;
+  align-self: end;
+  color: white;
+  width: 18px;
+}
+
+.home-shelf {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+}
+
+.shelf-item {
+  gap: 14px;
+  padding: 15px;
+  background: linear-gradient(125deg, #17263e, #0d172c);
+}
+
+.shelf-art {
+  flex: none;
+  width: clamp(65px, 7vw, 102px);
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.shelf-art:before {
+  content: "";
+  position: absolute;
+  inset: 4px -4px 4px 4px;
+  background: #405068;
+  border-radius: 4px;
+  transform: rotate(3deg);
+}
+
+.shelf-art img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.shelf-label {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.shelf-label .eco-strong {
+  overflow-wrap: anywhere;
+  font-size: 1.2rem;
+}
+
+.shelf-label .eco-small,
+.shelf-label>.eco-span {
+  font-size: .78rem;
+  color: #b8cadd;
+}
+
+.shelf-item>.eco-svg {
+  margin-left: auto;
+  width: 16px;
+}
+
+.home-surprise {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 55px);
+  border-radius: 20px;
+  border: 1px solid #31577a;
+  background: radial-gradient(ellipse at 85% 80%, #174d75, transparent 58%), linear-gradient(110deg, #0a1630, #112b50);
+}
+
+.home-surprise h2 {
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 3rem);
+}
+
+.home-surprise p {
+  max-width: 41ch;
+  margin: 9px 0 20px;
+  color: #d6e4f3;
+}
+
+.surprise-covers {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  padding: 14px 12px;
+}
+
+.surprise-covers img {
+  width: clamp(70px, 10vw, 145px);
+  border-radius: 6px;
+  aspect-ratio: 1;
+  box-shadow: 0 7px 18px #0008;
+  transform: rotate(-10deg);
+}
+
+.surprise-covers img+img {
+  margin-left: -26%;
+  transform: rotate(2deg);
+}
+
+.surprise-covers img:nth-child(3) {
+  transform: rotate(12deg);
+}
+
+@media(max-width:620px) {
+  .home-genres {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .genre-door {
+    min-height: 108px;
+    padding: 12px;
+  }
+
+  .genre-title .eco-strong {
+    font-size: 1.03rem;
+  }
+
+  .home-surprise {
+    gap: 10px;
+  }
+
+  .surprise-covers {
+    display: none;
+  }
+}
+
