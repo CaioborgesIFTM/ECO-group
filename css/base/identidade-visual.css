@@ -1,0 +1,185 @@
+/* Paleta da identidade ECO */
+body {
+  --bg: #0A0F2C;
+  --panel: #101d41;
+  --line: #2a4063;
+  --muted: #bdcbe2;
+  --cyan: #00E5FF;
+  --ink: #FFFFFF;
+  --orange: #FF6B1A;
+}
+
+#topo,
+#rodape {
+  background: #0A0F2C;
+}
+
+.hero {
+  background-color: #0d2b6e;
+  border-color: #284f83;
+}
+
+.hero:before {
+  background: linear-gradient(105deg, #0d2b6e 3%, #0d2b6ee8 32%, #1565C075 62%, #1565C005 90%);
+  background-size: 112% 100%;
+  animation: eco-intro 12s ease-in-out infinite alternate;
+}
+
+@keyframes eco-intro {
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+.hero-copy p,
+form .eco-label {
+  color: #fff;
+}
+
+h3{
+  color: #00E5FF;
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .hero:before {
+    animation: none;
+  }
+}
+
+.ref-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ref-item {
+  display: grid;
+  min-width: 0;
+  gap: 10px;
+}
+
+.foto-ref {
+  position: relative;
+  display: block;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #163b64, #14203a);
+}
+
+.foto-ref img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  transition: transform .25s;
+}
+
+.ref-item:hover img {
+  transform: scale(1.045);
+}
+
+.ref-info {
+  display: grid;
+  gap: 4px;
+}
+
+.ref-info .eco-strong {
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.generos .ref-item {
+  position: relative;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.generos .foto-ref {
+  aspect-ratio: 1.85;
+  border-radius: 0;
+}
+
+.generos .ref-info {
+  position: absolute;
+  inset: 0;
+  justify-content: start;
+  align-content: end;
+  padding: 11px;
+  background: linear-gradient(transparent, #090e23e8);
+}
+
+.generos .eco-small {
+  color: white;
+}
+
+.ref-detail {
+  display: grid;
+  grid-template-columns: minmax(120px, 270px) 1fr;
+  gap: 26px;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.ref-detail p {
+  margin: 12px 0;
+}
+
+.financeiro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 44px;
+}
+
+.financeiro .eco-strong {
+  display: block;
+  font-size: 1.65rem;
+}
+
+.period-note {
+  font-size: .8rem;
+}
+
+#resultados>.sectitle:not(:first-child) {
+  margin-top: 24px;
+}
+
+@media(max-width:760px) {
+  .ref-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .ref-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .ref-detail>.foto-ref {
+    max-width: 245px;
+    width: 100%;
+  }
+
+  .chart:has([data-id="365"][aria-pressed="true"]) .bars .eco-small {
+    writing-mode: vertical-rl;
+    justify-self: center;
+  }
+}
+
+.generos .foto-ref {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ref-detail>.reviewcover {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  image-rendering: auto;
+}
+
+.ref-detail h1 {
+  overflow-wrap: anywhere;
+}
+

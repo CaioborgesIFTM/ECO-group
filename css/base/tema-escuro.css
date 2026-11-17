@@ -1,0 +1,288 @@
+/* Superfícies escuras e sinalização das escolhas no ECO. */
+body {
+  --acento: #ff914f;
+  --acento-suave: #35251e;
+  --borda-quente: #915634;
+  --margem-pagina: clamp(12px, 1.75vw, 30px);
+}
+
+#shell,
+#rodape,
+#topo {
+  padding-inline: var(--margem-pagina);
+}
+
+#shell .eco-main {
+  min-width: 0;
+}
+
+#topo {
+  display: grid;
+  grid-template-columns: auto auto minmax(9rem, 1fr) auto;
+  align-items: center;
+  gap: clamp(12px, 2vw, 34px);
+  min-height: 70px;
+  padding-block: 10px;
+  background: #06090e;
+  border-bottom: 1px solid #303037;
+  box-shadow: 0 4px 16px #02040a45;
+}
+
+#topo .marca {
+  padding-right: clamp(10px, 1.8vw, 28px);
+  border-right: 1px solid #2b303b;
+}
+
+#topo .marca img {
+  width: 78px;
+}
+
+#topo .eco-nav {
+  gap: 3px;
+  flex-wrap: nowrap;
+  padding: 3px;
+  border-radius: 12px;
+  border: 1px solid #272c35;
+  background: #101318;
+}
+
+#topo .eco-nav a {
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 12px;
+  color: #c6c9d1;
+  font-size: .9rem;
+}
+
+#topo .eco-nav a:hover {
+  background: #20232a;
+  color: #fff;
+}
+
+#topo .eco-nav a.sel,
+#topo .account.sel,
+#topo .plain.sel {
+  background: var(--acento-suave);
+  color: var(--acento);
+  box-shadow: inset 0 -2px var(--orange);
+}
+
+#topo .top-actions {
+  margin: 0;
+  justify-self: end;
+  min-width: 0;
+}
+
+#topo .top-actions .primary {
+  background: var(--orange);
+  color: #1a0d07;
+  border: 1px solid #ff8543;
+}
+
+#topo .top-actions .primary:hover,
+.hero-eco .ctas .primary:hover {
+  background: #ffa263;
+}
+
+#topo .account {
+  padding: 6px 10px;
+  min-height: 36px;
+  border: 1px solid #323641;
+  border-radius: 22px;
+  color: #e0e4ec;
+}
+
+#topo .account .eco-svg {
+  color: var(--acento);
+  width: 17px;
+}
+
+#lateral .eco-nav a.sel {
+  color: var(--acento);
+  background: var(--acento-suave);
+  box-shadow: inset 3px 0 var(--orange);
+}
+
+.chip.sel,
+.chip[aria-pressed=true],
+.outline[aria-pressed=true],
+.iconbtn[aria-pressed=true] {
+  background: var(--acento-suave);
+  color: var(--acento);
+  border-color: var(--borda-quente);
+}
+
+.iconbtn[aria-pressed=true] .eco-svg {
+  fill: #ff87322e;
+}
+
+::selection {
+  background: #884017;
+  color: #fff;
+}
+
+.hero-eco .ctas .primary {
+  background: var(--orange);
+  color: #1a0d07;
+}
+
+.kicker .eco-i,
+.hero-eco .kicker .eco-i {
+  background: var(--orange);
+}
+
+.hero-eco .kicker,
+.sectitle .textlink,
+.genre-door>.eco-svg,
+.shelf-item>.eco-svg,
+.playlist-link>.eco-svg {
+  color: var(--acento);
+}
+
+.artist-round:is(:hover, :focus-visible) .avatar,
+.genre-door:hover,
+.shelf-item:hover {
+  border-color: var(--acento);
+}
+
+.activity-plot .eco-i {
+  background: linear-gradient(#ffb66c, #f07828);
+}
+
+@media(max-width:820px) {
+  #topo {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "logo conta" "nav busca";
+    gap: 6px 12px;
+    padding-block: 7px;
+  }
+
+  #topo .marca {
+    grid-area: logo;
+    justify-self: start;
+    padding: 0;
+    border: 0;
+  }
+
+  #topo .marca img {
+    width: 68px;
+  }
+
+  #topo .top-actions {
+    grid-area: conta;
+  }
+
+  #topo .eco-nav {
+    grid-area: nav;
+    justify-self: start;
+    width: auto;
+  }
+
+  #topo .eco-nav a {
+    font-size: .82rem;
+    padding: 7px 9px;
+  }
+}
+
+@media(max-width:700px) {
+  #lateral .eco-nav a.sel {
+    box-shadow: inset 0 -2px var(--orange);
+  }
+}
+
+@media(max-width:420px) {
+  #topo {
+    gap: 6px;
+  }
+
+  #topo .eco-nav {
+    gap: 0;
+    padding: 2px;
+  }
+
+  #topo .eco-nav a {
+    padding: 7px 5px;
+  }
+
+  #topo .top-actions {
+    gap: 4px;
+  }
+}
+
+#topo .top-actions {
+  max-width: 100%;
+}
+
+#topo .account {
+  min-width: 0;
+}
+
+#topo .primary.sel {
+  box-shadow: 0 0 0 2px #06090e, 0 0 0 3px var(--acento);
+}
+
+option:checked {
+  color: var(--acento);
+  background: #35251e;
+}
+
+.eco-dupla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1rem;
+}
+
+.eco-ranking {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.eco-ranking .eco-li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid #34415b;
+  padding: .85rem .25rem;
+}
+
+.eco-ranking .eco-li>.eco-span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.eco-ranking .eco-li .eco-b {
+  white-space: nowrap;
+}
+
+.mes-eco {
+  display: grid;
+  gap: .3rem;
+  font-size: .85rem;
+}
+
+.mes-eco select {
+  color: #fff;
+  background: #101b31;
+  border: 1px solid #52617c;
+  border-radius: .6rem;
+  padding: .6rem;
+}
+
+#lancamentos:not([hidden]) {
+  position: fixed;
+  z-index: 20;
+  right: 1rem;
+  top: calc(var(--altura-topo, 4rem) + .6rem);
+  max-width: calc(100% - 2rem);
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  background: #10192c;
+  border: 1px solid #ff894b;
+  border-radius: .9rem;
+  box-shadow: 0 .6rem 2rem #0007;
+  padding: .8rem 1rem;
+}
+

@@ -1,0 +1,17 @@
+@media (max-width: 950px) {
+  #topo {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "logo conta" "nav nav";
+    gap: 6px 10px;
+  }
+  .eco-meu-mes .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  #topo { grid-template-areas: "logo conta" "nav nav" "busca busca"; }
+  #topo > .top-actions { display: contents; }
+  #topo .top-actions > a:not(.iconbtn) { grid-row: 1; justify-self: end; }
+  #topo .top-actions > a.plain, #topo .top-actions > a.account { margin-right: 75px; }
+  #topo .top-actions > a { grid-column: 2; grid-row: 1; justify-self: end; }
+  #topo .eco-busca { grid-area: busca; width: 100%; }
+  .eco-meu-mes .stats { grid-template-columns: 1fr; }
+}
