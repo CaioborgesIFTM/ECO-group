@@ -15,9 +15,9 @@ Para publicar no GitHub Pages, envie o conteúdo da pasta extraída ao repositó
 
 | Perfil | E-mail fictício | Senha de apresentação |
 | --- | --- | --- |
-| Ouvinte | ouvinte@gmail.com | eco12345 |
-| Artista | artista@gmail.com | eco12345 |
-| Administrador | administrador@gmail.com | 1234567 |
+| Ouvinte | ouvinte@gmail.com | 1234 |
+| Artista | artista@gmail.com | 1234 |
+| Administrador | administrador@gmail.com | 1234 |
 
 ## Organização do código
 
