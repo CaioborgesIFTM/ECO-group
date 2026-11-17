@@ -1,0 +1,48 @@
+/* Navegação da conta */
+#shell.workspace {
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: clamp(16px, 3vw, 42px);
+}
+
+#lateral {
+  min-width: 0;
+  border-right: 1px solid #283653;
+  padding-right: 16px;
+}
+
+#lateral>.eco-nav {
+  background: linear-gradient(150deg, #111c37, #0c1325);
+  border: 1px solid #27344d;
+  border-radius: 14px;
+  padding: 8px;
+}
+
+.nav-set {
+  padding: 7px 0;
+  display: grid;
+  gap: 2px;
+}
+
+.nav-set+.nav-set {
+  border-top: 1px solid #2a3650;
+}
+
+.nav-set>.eco-small {
+  font-size: .66rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #a8b6cb;
+  padding: 4px 9px;
+}
+
+#lateral .eco-nav a {
+  padding: 9px;
+  gap: 9px;
+}
+
+#lateral .eco-nav a.sel {
+  background: #13314d;
+  color: #80f3ff;
+  box-shadow: inset 3px 0 #00e5ff;
+}
+

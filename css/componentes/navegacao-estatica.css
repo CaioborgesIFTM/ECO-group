@@ -1,0 +1,11 @@
+/* Navegação estática e ajuda por âncoras. */
+.faq-item .resposta{display:none}.faq-item:target .resposta{display:block}.faq-item{scroll-margin-top:6rem}.artist-strip{overflow-x:auto;scrollbar-width:thin}.artist-strip::-webkit-scrollbar{display:block;height:5px}.categorias-header{white-space:nowrap}.eco-summary{font-weight:700}.authform input{max-width:100%}audio{max-width:100%}.eco-details .eco-summary{cursor:inherit}.faq-item a.eco-summary{cursor:pointer}
+@media(max-width:650px){.categorias-header{display:none}}
+
+/* Links e ícones usam as mesmas dimensões do catálogo original. */
+.categorias-header { justify-self: end; }
+.trackplay { display: block; }
+.sleeve .eco-svg, .trackplay .eco-svg { width: 20px; height: 20px; }
+.faq-item .eco-summary { display: block; padding: 14px 0; }
+@media (max-width: 760px) { .categorias-header { grid-area: busca; } }
+

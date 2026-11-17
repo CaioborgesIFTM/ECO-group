@@ -1,0 +1,22 @@
+/* Curtidas e ações demonstrativas do administrador. */
+.eco-acoes-faixa, .eco-admin-botoes {
+  display: flex; align-items: center; justify-content: flex-end; gap: 6px;
+}
+.eco-acoes-faixa > button {
+  width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 20px;
+}
+.eco-acoes-faixa .eco-coracao:disabled { color: #ff883f; opacity: 1; }
+.eco-opcoes {
+  width: min(320px, 88vw); padding: 22px; margin: auto;
+  color: #fff; background: #101a31; border: 1px solid #40506b; border-radius: 16px;
+}
+.eco-opcoes::backdrop { background: #040816aa; }
+.eco-opcoes h2 { margin: 0 0 14px; font-size: 1.2rem; }
+.eco-opcoes button { display: block; width: 100%; margin-top: 6px; text-align: left; }
+.eco-opcoes button:disabled, .eco-admin-botoes button:disabled {
+  color: #cbd5e3; opacity: .85; cursor: default;
+}
+.eco-admin-artista { flex: 0 0 auto; display: grid; justify-items: center; gap: 8px; }
+.eco-admin-artista .eco-admin-botoes { flex-wrap: wrap; justify-content: center; }
+.eco-admin-botoes button { padding: 6px 9px; font-size: .8rem; }
+

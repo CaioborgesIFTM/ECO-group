@@ -1,0 +1,589 @@
+.covers {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 24px);
+}
+
+.cover {
+  min-width: 0;
+}
+
+.sleeve {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid #ffffff18;
+  background: var(--panel);
+  border-radius: 13px;
+}
+
+.sleeve img {
+  width: 100%;
+  height: 100%;
+  transition: transform .3s;
+}
+
+.cover:hover img {
+  transform: scale(1.035);
+}
+
+.sleeve .iconbtn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #09141cde;
+  color: white;
+  backdrop-filter: blur(6px);
+  border: 1px solid #ffffff56;
+}
+
+.meta {
+  display: grid;
+  gap: 4px;
+  padding: 11px 2px 0;
+}
+
+.meta .eco-small {
+  font-size: .67rem;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.meta .eco-strong {
+  font-size: 1.12rem;
+}
+
+.meta a,
+.trackname a {
+  color: var(--muted);
+  font-size: .88rem;
+  width: fit-content;
+}
+
+.meta a:hover,
+.trackname a:hover {
+  color: var(--cyan);
+}
+.stats .eco-article,
+.chart{
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--panel);
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  flex: none;
+}
+.trackname {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 166px minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 48px);
+}
+
+#lateral>.eco-nav {
+  display: grid;
+  position: sticky;
+  top: 16px;
+  gap: 5px;
+}
+
+#lateral .eco-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border-radius: 10px;
+  color: var(--muted);
+}
+
+#lateral .eco-nav a.sel {
+  color: var(--cyan);
+  background: #15272e;
+}
+
+.chips {
+  flex-wrap: wrap;
+  margin: 16px 0 22px;
+}
+
+.chip {
+  font-size: .88rem;
+  border-radius: 18px;
+  padding: 8px 16px;
+  min-height: 38px;
+}
+
+.chip[aria-pressed=true],
+.chip.sel {
+  background: #193b40;
+  color: var(--cyan);
+  border-color: #34716f;
+}
+.senha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tracks {
+  border-top: 1px solid var(--line);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  min-width: 0;
+}
+
+.trackplay,
+.thumb {
+  height: 48px;
+  width: 48px;
+  flex: none;
+  border: 0;
+  background: var(--panel);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.trackplay img {
+  width: 100%;
+  height: 100%;
+}
+
+.trackplay .eco-span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: #08131c66;
+}
+
+.trackplay .eco-svg {
+  width: 16px;
+}
+
+.trackname {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.trackgenre {
+  color: var(--muted);
+  font-size: .84rem;
+}
+
+.empty{
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.empty {
+  border: 1px dashed var(--line);
+  margin: 12px 0;
+}
+
+.profile-banner {
+  height: 175px;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.profile-banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.identity {
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+
+.identity .avatar {
+  width: 80px;
+  height: 80px;
+}
+
+.identity h1 {
+  margin: 4px 0;
+}
+
+.identity .outline {
+  margin-left: auto;
+}
+
+.chart {
+  padding: 22px;
+}
+
+.stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stats .eco-article {
+  padding: 17px;
+  display: grid;
+  gap: 8px;
+}
+
+.stats .eco-b {
+  font-size: 2.1rem;
+}
+
+#rodape {
+  border-top: 1px solid var(--line);
+  padding: 25px clamp(16px, 4vw, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#rodape p {
+  margin-top: 5px;
+  font-size: .85rem;
+}
+
+#rodape .eco-nav {
+  gap: 15px;
+  font-size: .9rem;
+}
+
+#rodape .eco-small {
+  font-size: .76rem;
+}
+
+.authbox {
+  max-width: 950px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--panel);
+}
+
+.authart {
+  background: linear-gradient(0deg, #071321d9, transparent), url("../../assets/hero.webp") 75% center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 32px;
+}
+
+.authart h2 {
+  margin-top: 15px;
+  font-size: 3.2rem;
+}
+
+.authform {
+  padding: clamp(22px, 3vw, 44px);
+}
+
+.authform h1 {
+  font-size: 2.45rem;
+}
+
+.authform form {
+  margin-bottom: 16px;
+}
+
+form{
+  display: grid;
+  gap: 15px;
+}
+
+form .eco-label {
+  display: grid;
+  gap: 7px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: #0c141e;
+  border: 1px solid #344451;
+  border-radius: 8px;
+}
+
+textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.senha input {
+  flex: 1;
+}
+
+.senha button {
+  border: 0;
+  background: none;
+  color: var(--cyan);
+}
+
+.error {
+  color: #ffb6a6;
+}
+
+.error:empty {
+  display: none;
+}
+
+dialog {
+  width: min(490px, calc(100% - 22px));
+  max-height: 88dvh;
+  padding: 26px;
+  background: #111b27;
+  color: var(--ink);
+  border: 1px solid #3a4a56;
+  border-radius: 18px;
+}
+
+dialog::backdrop {
+  background: #02070bc9;
+}
+
+.reviewcover {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+}
+
+.ctas {
+  flex-wrap: wrap;
+}
+
+.eco-main {
+  animation: arrive .2s ease-out;
+}
+
+@keyframes arrive {
+  from {
+    opacity: .7;
+    transform: translateY(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media(max-width:920px) {
+  .workspace {
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .workspace .covers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .top-actions .account {
+    max-width: 145px;
+  }
+
+  .trackgenre {
+    display: none;
+  }
+
+  .track {
+    gap: 8px;
+  }
+
+  .actions {
+    gap: 1px;
+  }
+}
+
+@media(max-width:700px) {
+  #topo {
+    flex-wrap: wrap;
+    gap: 7px 12px;
+    min-height: 60px;
+  }
+
+  .marca img {
+    width: 70px;
+  }
+
+  #topo .eco-nav {
+    order: 3;
+    width: 100%;
+    gap: 22px;
+    font-size: .88rem;
+  }
+
+  .top-actions .plain,
+  .top-actions .primary {
+    min-height: 36px;
+    padding: 8px 14px;
+  }
+
+  #shell {
+    padding-top: 16px;
+  }
+
+  .hero {
+    min-height: 360px;
+    padding: 22px;
+    background-position: 61% center;
+  }
+
+  .hero-copy p {
+    max-width: 290px;
+  }
+
+  .hero:before {
+    background: linear-gradient(90deg, #08141de8, #08141d75 66%, transparent);
+  }
+
+  .covers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .authbox {
+    grid-template-columns: 1fr;
+  }
+
+  .authart {
+    display: none;
+  }
+
+  .workspace {
+    display: block;
+  }
+
+  #lateral>.eco-nav {
+    position: static;
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 23px;
+    gap: 4px;
+  }
+
+  #lateral .eco-nav a {
+    font-size: .75rem;
+    flex-direction: column;
+    gap: 3px;
+    padding: 8px 9px;
+    flex: 1;
+  }
+
+  .sectitle {
+    align-items: start;
+    flex-wrap: wrap;
+  }
+
+  .stats {
+    gap: 7px;
+  }
+
+  .stats .eco-article {
+    padding: 9px;
+  }
+
+  .stats .eco-b {
+    font-size: 1.5rem;
+  }
+
+  .trackname .eco-strong {
+    font-size: .94rem;
+  }
+
+  .track .iconbtn {
+    width: 39px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.1rem, 11vw, 4.4rem);
+  }
+
+  .workspace .eco-section+.eco-section,
+  .eco-main>.eco-section:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  .transport .iconbtn:not([data-act=toggle]):not([data-act=next]),
+  .scrub,
+  .sound {
+    display: none;
+  }
+
+  .com-player:has(.expandido) {
+    padding-bottom: 200px;
+  }
+
+  .top-actions .account {
+    max-width: 130px;
+  }
+}
+
+@media(max-width:390px) {
+  #lateral .eco-nav a {
+    padding: 7px 5px;
+  }
+
+  .hero .ctas {
+    gap: 6px;
+  }
+
+  .hero .ctas a,
+  .hero .ctas button {
+    padding: 9px 11px;
+  }
+
+  .actions .iconbtn {
+    width: 34px;
+  }
+
+  .track .thumb,
+  .trackplay {
+    width: 40px;
+    height: 40px;
+  }
+
+  .top-actions {
+    gap: 2px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+

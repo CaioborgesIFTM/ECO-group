@@ -1,0 +1,30 @@
+/* Cabeçalho com navegação central e pesquisa ilustrativa. */
+#topo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-areas: "logo nav conta";
+  align-items: center;
+  min-height: 76px;
+  padding-block: 12px;
+}
+#topo > .marca { grid-area: logo; justify-self: start; }
+#topo > .eco-nav { grid-area: nav; justify-self: center; }
+#topo > .top-actions {
+  grid-area: conta;
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 8px;
+  min-width: 0;
+}
+#topo .eco-busca {
+  width: clamp(108px, 13vw, 210px);
+  min-width: 0;
+  padding: 9px 13px;
+  border: 1px solid #39465b;
+  border-radius: 22px;
+  background: #141b29;
+  color: white;
+}
+#topo .eco-busca::placeholder { color: #b7c4d4; }
+
