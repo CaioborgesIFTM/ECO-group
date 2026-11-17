@@ -9,23 +9,37 @@ const formularioLogin = document.getElementById("form-login");
 const formularioCadastro = document.getElementById("form-cadastro");
 const mensagem = document.getElementById("mensagem");
 
+const formularioLogin = document.getElementById("form-login");
+const formularioCadastro = document.getElementById("form-cadastro");
+const mensagem = document.getElementById("mensagem");
+
 if (formularioLogin) {
     formularioLogin.addEventListener("submit", function (evento) {
         evento.preventDefault();
-        const campos = formularioLogin.elements;
-        const email = campos.email.value.trim().toLowerCase();
-        const conta = contas.find(function (perfil) {
-            return perfil.email === email && perfil.senha === campos.password.value;
-        });
 
-        if (conta) {
-            window.location.href = conta.pagina;
-        } else {
+        const email = formularioLogin.elements.email.value;
+        const senha = formularioLogin.elements.password.value;
+        const pagina = window.location.pathname;
+
+        if (senha !== "1234") {
             mensagem.textContent = "E-mail ou senha não conferem.";
+        } else if (email === "administrador@gmail.com") {
+            window.location.href = "admin.html";
+        } else if (
+            email === "ouvinte@gmail.com" &&
+            pagina.endsWith("/login.html")
+        ) {
+            window.location.href = "painel-ouvinte.html";
+        } else if (
+            email === "artista@gmail.com" &&
+            pagina.endsWith("/login-artista.html")
+        ) {
+            window.location.href = "estudio.html";
+        } else {
+            mensagem.textContent = "E-mail incorreto ou conta não permitida nesta página.";
         }
     });
 }
-
 // O cadastro confere a confirmação sem enviar nem armazenar os campos.
 if (formularioCadastro) {
     formularioCadastro.addEventListener("submit", function (evento) {
