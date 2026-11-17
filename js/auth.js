@@ -4,6 +4,9 @@ const contas = [
     { email: "artista@gmail.com", senha: "1234", pagina: "estudio.html" },
     { email: "administrador@gmail.com", senha: "1234", pagina: "admin.html" }
 ];
+const formularioLogin = document.getElementById("form-login");
+const formularioCadastro = document.getElementById("form-cadastro");
+const mensagem = document.getElementById("mensagem");
 //Testa as senhas permite entrar como admin nas duas paginas, mas como ouvinte apenas em ouvinte, como artista apeanas em artista
 if (formularioLogin) {
     formularioLogin.addEventListener("submit", function (evento) {
