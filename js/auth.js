@@ -1,8 +1,8 @@
 // Contas fictícias usadas exclusivamente na apresentação do ECO.
 const contas = [
-    { email: "ouvinte@gmail.com", senha: "eco12345", pagina: "painel-ouvinte.html" },
-    { email: "artista@gmail.com", senha: "eco12345", pagina: "estudio.html" },
-    { email: "administrador@gmail.com", senha: "1234567", pagina: "admin.html" }
+    { email: "ouvinte@gmail.com", senha: "1234", pagina: "painel-ouvinte.html" },
+    { email: "artista@gmail.com", senha: "1234", pagina: "estudio.html" },
+    { email: "administrador@gmail.com", senha: "1234", pagina: "admin.html" }
 ];
 
 const formularioLogin = document.getElementById("form-login");
