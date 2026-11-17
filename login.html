@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Entre no ECO | ECO</title>
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="css/eco.css">
+    <script defer src="js/auth.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+    <!-- Cabeçalho e navegação por links HTML. -->
+    <div id="topo" class="eco-header">
+      <a class="marca" href="index.html">
+        <img src="assets/logo.png" alt="ECO">
+      </a>
+      <div role="navigation" aria-label="Navegação principal" class="eco-nav">
+        <a class="" href="index.html">Início</a>
+        <a class="" href="explorar.html">Explorar</a>
+        <a class="" href="sobre.html">Sobre</a>
+      </div>
+      
+      <div class="top-actions"><input class="eco-busca" type="search" placeholder="Pesquisar no ECO" aria-label="Pesquisar no ECO (ilustrativo)" readonly>
+        <a class="plain sel" aria-current="page" href="login.html">Entrar</a>
+        <a class="primary" href="cadastro.html">Criar conta</a>
+      </div>
+    </div>
+    <div id="shell">
+      <!-- Conteúdo desta página, disponível sem JavaScript. -->
+      <div id="conteudo" role="main" tabindex="-1" class="eco-main">
+        <div class="authbox">
+          <div class="authart identidade-acesso">
+            <img src="assets/fone-acesso.webp" alt="" class="icone-acesso">
+            <div>
+              <div class="kicker eco-span">
+                <div class="eco-i"></div>PARA OUVINTES</div>
+              <h2>Sua próxima descoberta começa aqui.</h2>
+              <p>Encontre novos artistas e guarde as músicas que ficam com você.</p>
+            </div>
+          </div>
+          <div class="authform">
+            <h1>Entre no ECO</h1>
+            <p>Entre para reencontrar sua coleção.</p>
+            <div class="chips">
+              <a class="chip sel" aria-current="page" href="login.html">Ouvinte</a>
+              <a class="chip " href="login-artista.html">Artista</a>
+            </div>
+            <form id="form-login" method="dialog">
+              <div class="eco-label">E-mail<input name="email" value="" type="email" required autocomplete="email" aria-label="E-mail">
+              </div>
+              <div class="eco-label">Senha<div class="senha eco-span">
+                  <input type="password" minlength="1" required name="password" autocomplete="current-password" aria-label="Senha">
+                </div>
+              </div>
+              <a class="textlink" href="esqueci-senha.html#ouvinte">Esqueci minha senha?</a>
+              <p class="error" role="alert" id="mensagem"></p>
+              <button class="primary">Entrar</button>
+            </form>
+            <a class="textlink" href="cadastro.html">Criar uma conta</a>
+            <p>Conta de ouvinte: ouvinte@gmail.com · Senha: eco12345.</p>
+            <p>Administração: administrador@gmail.com · Senha: 1234567. Use apenas os dados fictícios desta apresentação.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Rodapé comum do ECO. -->
+    <div id="rodape" class="eco-footer">
+      <div class="footer-identidade">
+        <a class="marca" href="index.html">
+          <img src="assets/logo.png" alt="ECO — início">
+        </a>
+        <p>Descoberta musical para quem escuta e para quem cria.</p>
+      </div>
+      <div aria-label="Navegação" class="eco-nav">
+        <h2>Navegação</h2>
+        <a class="" href="index.html">Início</a>
+        <a class="" href="explorar.html">Explorar</a>
+        <a class="" href="sobre.html">Sobre o ECO</a>
+      </div>
+      <div aria-label="Comunidade" class="eco-nav">
+        <h2>Comunidade</h2>
+        <a class="" href="login.html">Para ouvintes</a>
+        <a class="" href="login-artista.html">Para artistas</a>
+        <a class="" href="login.html">Minhas playlists</a>
+      </div>
+      <div aria-label="Ajuda e informações" class="eco-nav">
+        <h2>Ajuda e informações</h2>
+        <a class="" href="ajuda.html">Central de ajuda</a>
+        <a class="" href="uso.html">Termos de uso</a>
+        <a class="" href="privacidade.html">Privacidade</a>
+      </div>
+    </div>
+  </body>
+</html>
