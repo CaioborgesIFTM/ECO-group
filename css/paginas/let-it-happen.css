@@ -1,0 +1,71 @@
+/* Player ilustrativo exclusivo da ficha de Let It Happen. */
+.player-currents {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 420px;
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid #33456c;
+    border-radius: 16px;
+    background: linear-gradient(115deg, #172746, #10182e);
+    box-sizing: border-box;
+}
+
+.player-currents .play-currents:disabled {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #ff863e;
+    opacity: 1;
+    cursor: default;
+}
+
+.play-currents::before {
+    content: "";
+    margin-left: 3px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 13px solid #10182e;
+}
+
+.player-currents .tempo-currents p {
+    margin: 0 0 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.trilho-currents {
+    position: relative;
+    height: 4px;
+    border-radius: 4px;
+    background: #455776;
+}
+
+.trilho-currents::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00e5ff;
+    transform: translateY(-50%);
+}
+
+.minutos-currents {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    color: #bdcce1;
+}
