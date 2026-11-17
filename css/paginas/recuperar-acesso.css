@@ -1,0 +1,39 @@
+/* O fragmento do link seleciona o perfil, inclusive ao vir do login. */
+.recuperar-acesso .dados-acesso {
+    display: none;
+    margin: 20px 0;
+    padding: 18px;
+    background: #101b35;
+    border: 1px solid #394d75;
+    border-radius: 14px;
+    scroll-margin-top: 100px;
+}
+.recuperar-acesso .dados-acesso:target {
+    display: block;
+}
+.recuperar-acesso .dados-acesso h2 {
+    margin: 0 0 14px;
+    font-size: 1.2rem;
+}
+.recuperar-acesso .dados-acesso p {
+    margin: 12px 0 2px;
+    color: #b4c5df;
+    font-size: .85rem;
+}
+.valor-acesso {
+    color: #fff;
+    overflow-wrap: anywhere;
+}
+.dados-acesso .primary {
+    margin-top: 16px;
+}
+.recuperar-acesso .nota-acesso {
+    font-size: .9rem;
+    line-height: 1.5;
+}
+.recuperar-acesso:has(#ouvinte:target) a[href="#ouvinte"],
+.recuperar-acesso:has(#artista:target) a[href="#artista"],
+.recuperar-acesso:has(#administrador:target) a[href="#administrador"] {
+    border-color: #ff863e;
+    color: #ffad78;
+}
