@@ -1,0 +1,207 @@
+/* Estilos do ECO, na ordem original de aplicação. */
+@import url("base/estilos-gerais.css");
+@import url("componentes/catalogo-e-paineis.css");
+@import url("base/identidade-visual.css");
+@import url("componentes/menu-da-conta.css");
+@import url("paginas/estudio-e-albuns.css");
+@import url("paginas/inicio.css");
+@import url("componentes/navegacao-e-colecoes.css");
+@import url("base/tema-escuro.css");
+@import url("componentes/acesso-rodape-e-ajuda.css");
+@import url("componentes/navegacao-estatica.css");
+@import url("componentes/cabecalho.css");
+@import url("paginas/meu-mes.css");
+@import url("componentes/acoes-das-faixas.css");
+@import url("base/ajustes-para-telas-menores.css");
+@import url("paginas/administracao.css");
+/* ADMIN — os artistas ocupam a largura disponível e quebram de linha. */
+.artist-strip:has(> .eco-admin-artista) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(165px, 100%), 1fr));
+    align-items: start;
+    gap: 20px 12px;
+    width: 100%;
+    overflow: visible;
+    scroll-snap-type: none;
+    padding: 6px 0;
+}
+
+.eco-admin-artista {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.eco-admin-artista .eco-admin-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* CORAÇÕES — listas de músicas, cards do ouvinte e ranking do Estúdio. */
+.track > .actions:not(:has(*))::after,
+#shell.workspace .cover .meta::after,
+.eco-ranking .eco-li:has(> .ranking-faixa)::after {
+    content: "\2661";
+    display: inline-grid;
+    place-items: center;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    border: 1px solid #40506b;
+    border-radius: 50%;
+    color: #ff9456;
+    background: #142044;
+    font: 22px/1 "Segoe UI Symbol", sans-serif;
+    pointer-events: none;
+}
+
+#shell.workspace .cover .meta {
+    position: relative;
+    padding-right: 42px;
+}
+
+#shell.workspace .cover .meta::after {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+}
+
+.eco-ranking .eco-li:has(> .ranking-faixa) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.eco-ranking .ranking-faixa {
+    flex: 1;
+    min-width: 0;
+}
+
+/* TRÊS PONTINHOS — o menu mantém o fundo escuro inclusive nos botões desativados. */
+.eco-opcoes[popover] {
+    box-sizing: border-box;
+    width: min(330px, calc(100% - 32px));
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #40506b;
+    border-radius: 16px;
+    background: #101a31;
+    color: #fff;
+}
+
+.eco-opcoes h2 {
+    margin: 0 0 14px;
+}
+
+.eco-opcoes button,
+.eco-opcoes button:disabled,
+.eco-acoes-faixa > .eco-mais,
+.eco-acoes-faixa > .eco-coracao:disabled {
+    appearance: none;
+    background: #192846;
+    color: #f4f7ff;
+    border: 1px solid #465977;
+    opacity: 1;
+}
+
+.eco-opcoes button {
+    width: 100%;
+    min-height: 40px;
+    margin: 6px 0 0;
+    padding: 9px 12px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.eco-opcoes button:disabled {
+    cursor: default;
+}
+
+.eco-opcoes button[popovertargetaction="hide"] {
+    margin-top: 14px;
+    color: #ffad78;
+    border-color: #925633;
+    cursor: pointer;
+}
+
+.eco-acoes-faixa > .eco-coracao:disabled {
+    color: #ff9456;
+}
+
+/* ECO: três pontinhos junto ao coração da faixa. */
+.eco-menu-faixa {
+    display: inline-grid;
+    place-items: center;
+    box-sizing: border-box;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid #40506b;
+    border-radius: 50%;
+    background: #142044;
+    color: #fff;
+    font: 20px/1 Arial, sans-serif;
+    cursor: pointer;
+}
+.eco-menu-faixa:hover,
+.eco-menu-faixa:focus-visible {
+    border-color: #ff9456;
+    color: #ff9456;
+}
+
+.track > .eco-par-faixa {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.track > .eco-par-faixa::before {
+    content: "\2661";
+    display: inline-grid;
+    place-items: center;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #40506b;
+    border-radius: 50%;
+    color: #ff9456;
+    background: #142044;
+    font: 22px/1 "Segoe UI Symbol", sans-serif;
+}
+
+/* Nos cards, os dois ícones têm espaço próprio abaixo do nome. */
+#shell.workspace .cover .eco-meta-menu {
+    position: relative;
+    padding-right: 0;
+    padding-bottom: 42px;
+    min-height: 42px;
+}
+#shell.workspace .cover .eco-meta-menu::after {
+    top: auto;
+    bottom: 3px;
+    right: 41px;
+}
+.eco-meta-menu > .eco-menu-faixa {
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+}
+
+/* No ranking, o botão acompanha o coração no fim da linha. */
+.eco-ranking .eco-li:has(> .ranking-faixa)::after { order: 1; }
+.eco-ranking .eco-li > .eco-menu-faixa { order: 2; }
+
+#eco-menu-musica button {
+    appearance: none;
+    border: 1px solid #465977;
+    background: #192846;
+    color: #f4f7ff;
+    opacity: 1;
+}
+#eco-menu-musica button[popovertargetaction="hide"] {
+    color: #ffad78;
+    border-color: #925633;
+}
