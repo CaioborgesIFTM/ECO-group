@@ -257,10 +257,18 @@ div.campo-musica > :last-child {
   min-width: 0;
   width: 100%;
 }
-div#faixa-preparada { display: none; }
-div#faixa-preparada:target {
-  display: block;
-  padding: 16px;
-  color: var(--ink);
-  background: var(--panel);
+div.campo-musica > :disabled {
+  opacity: 1;
+  color: #b7c4d4;
+  background: #101a31;
+}
+div.campo-musica > :disabled::file-selector-button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  border: 1px solid #465977;
+  border-radius: 6px;
+  background: #243450;
+  color: #d5dfef;
+  font: inherit;
+  cursor: default;
 }
