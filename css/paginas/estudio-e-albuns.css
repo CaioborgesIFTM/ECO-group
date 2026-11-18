@@ -247,3 +247,20 @@
   }
 }
 
+
+div.campo-musica {
+  display: grid;
+  gap: 5px;
+  margin: 14px 0;
+}
+div.campo-musica > :last-child {
+  min-width: 0;
+  width: 100%;
+}
+div#faixa-preparada { display: none; }
+div#faixa-preparada:target {
+  display: block;
+  padding: 16px;
+  color: var(--ink);
+  background: var(--panel);
+}

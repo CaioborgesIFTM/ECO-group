@@ -91,10 +91,29 @@
                 <div class="eco-i"></div>PAINEL DO ARTISTA</div>
               <h1>Olá, Tame Impala!</h1>
               <p>Acompanhe suas músicas, seu público e seus resultados.</p>
-              <div class="ctas"></div>
+              <div class="ctas">
+                <button class="primary" type="button" popovertarget="publicar-musica">Publicar música</button>
+              </div>
             </div>
           </div>
         </div>
+        <div id="publicar-musica" class="eco-opcoes" popover role="dialog" aria-labelledby="titulo-publicar">
+          <h2 id="titulo-publicar">Publicar música</h2>
+          <p>Prepare uma faixa de demonstração. O arquivo fica no seu dispositivo.</p>
+          <form action="estudio.html#faixa-preparada" method="get">
+            <div class="campo-musica">
+              <label for="nome-faixa">Título da música</label>
+              <input id="nome-faixa" required maxlength="120">
+            </div>
+            <div class="campo-musica">
+              <label for="arquivo-faixa">Arquivo de áudio (MP3)</label>
+              <input id="arquivo-faixa" type="file" accept=".mp3,audio/mpeg" required>
+            </div>
+            <button type="submit">Concluir demonstração</button>
+            <button type="button" popovertarget="publicar-musica" popovertargetaction="hide">Cancelar</button>
+          </form>
+        </div>
+        <div id="faixa-preparada" tabindex="-1">Demonstração concluída. Nenhum arquivo foi enviado ao catálogo.</div>
         <div class="studio-public">
           <a class="textlink" href="../artistas/tame-impala.html">Ver perfil público <img src="../assets/icones/bf5bca655934.svg" alt="" class="eco-svg">
           </a>

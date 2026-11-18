@@ -7,11 +7,16 @@
   .eco-meu-mes .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 520px) {
-  #topo { grid-template-areas: "logo conta" "nav nav" "busca busca"; }
-  #topo > .top-actions { display: contents; }
-  #topo .top-actions > a:not(.iconbtn) { grid-row: 1; justify-self: end; }
-  #topo .top-actions > a.plain, #topo .top-actions > a.account { margin-right: 75px; }
-  #topo .top-actions > a { grid-column: 2; grid-row: 1; justify-self: end; }
-  #topo .eco-busca { grid-area: busca; width: 100%; }
+  div#topo {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas: "logo acesso acao" "nav nav nav" "busca busca busca";
+    column-gap: 6px;
+  }
+  div#topo > .top-actions { display: contents; }
+  div#topo .top-actions > .plain,
+  div#topo .top-actions > .account { grid-area: acesso; }
+  div#topo .top-actions > .primary,
+  div#topo .top-actions > .iconbtn { grid-area: acao; }
+  div#topo .eco-busca { grid-area: busca; width: 100%; }
   .eco-meu-mes .stats { grid-template-columns: 1fr; }
 }
